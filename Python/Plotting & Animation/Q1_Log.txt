@@ -1,0 +1,26 @@
+changeset:   4:459660ace2c9
+tag:         tip
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 20 17:37:47 2014 -0500
+summary:     Including a linear fit and a legend. Closing the file
+
+changeset:   3:9032d06876d0
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 20 17:29:34 2014 -0500
+summary:     Adding grid and labels. Adjusting font size and saving figure
+
+changeset:   2:95faa822015a
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 20 17:28:53 2014 -0500
+summary:     Opening file and plotting
+
+changeset:   1:aba103596447
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 20 15:22:17 2014 -0500
+summary:     Skeleton for Q1 including a description of the data comes from. Commets where added as pseudocode
+
+changeset:   0:d87285ad28b1
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 20 15:08:08 2014 -0500
+summary:     Creating file and setting it up for python run
+

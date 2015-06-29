@@ -1,0 +1,1 @@
+Added the display on the time and changing colors

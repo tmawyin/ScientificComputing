@@ -1,0 +1,41 @@
+changeset:   7:a771cb134489
+tag:         tip
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 15:02:08 2014 -0500
+summary:     Additional feature added to save animation of the dynamics of the system
+
+changeset:   6:950f8b125e57
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:48:09 2014 -0500
+summary:     Added an extra feature to see the dynamics of the system. It produces an interactive plot with the initial number of zombies from 0 to 30
+
+changeset:   5:0739ecb1289f
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:45:41 2014 -0500
+summary:     Creating plot and adding grid, label, title, and legend. Also, saving figure
+
+changeset:   4:c1f95ce6267b
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:35:16 2014 -0500
+summary:     Solving the system using ODEINT and storing solutions in new variables
+
+changeset:   3:98aa70224f9d
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:34:23 2014 -0500
+summary:     Setup initial conditions - Here we can vary initial number of zombies prior to plotting
+
+changeset:   2:8c16f3e57bc4
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:33:20 2014 -0500
+summary:     Added given varibles such as ratios and defining the equations in a function
+
+changeset:   1:fca4c0eb53a9
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:31:58 2014 -0500
+summary:     Added comments as skeleton of the script
+
+changeset:   0:1a15d449fd2c
+user:        Tomas Mawyin <t.mawyin@mail.utoronto.ca>
+date:        Thu Nov 27 14:26:25 2014 -0500
+summary:     Initial file, added comments regargind what the script is about for clarification
+

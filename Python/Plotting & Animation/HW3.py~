@@ -1,0 +1,99 @@
+#!/usr/bin/env python
+"""
+SCMP112 - Intro to Research Computing with Python
+Homework # 3: Visualization and File I/O
+Tomas Mawyin
+"""
+"""
+--- QUESTION # 1 --- 
+Python script which creates a professional-quality plot. 
+A binary file containing validation for gaussian process model applied to graphene cohesive energy (from molecular dynamics) will be used. 
+The plot will show the actual (from molecular dynamics) vs predicted (from model) for the material property.
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io.netcdf import *
+
+
+# Import file and extract variables
+f = netcdf_file('CohEng.nc','r')
+Ecoh_actual = np.asarray(f.variables['Ecoh_actual'][:])
+Ecoh_predict = np.asarray(f.variables['Ecoh_predict'][:])
+
+# Create basic figure and plot
+fig = plt.figure(1,dpi=600)
+ax = fig.add_subplot(111)
+ax.plot(Ecoh_actual,Ecoh_predict,'o',label='Actual vs Predicted')
+
+# Adding a grid to the plot in a light grey color
+ax.xaxis.grid(True, linestyle='-', which='major', color='lightgrey',alpha=0.8)
+ax.yaxis.grid(True, linestyle='-', which='major', color='lightgrey',alpha=0.8)
+# Removing top and right ticks
+ax.get_xaxis().tick_bottom()
+ax.get_yaxis().tick_left()
+# Setting x and y axes labels and font size
+ax.set_ylabel(r'Predicted Cohesive Energy [eV]',fontsize = 8)
+ax.set_xlabel(r'Actual Cohesive Energy [eV]',fontsize = 8)
+ax.xaxis.set_tick_params(labelsize=8)
+ax.yaxis.set_tick_params(labelsize=8)
+fig.tight_layout()
+
+# Adding a linear fit to the plot to show good correlation between actual and predicted values
+fit = np.polyfit(Ecoh_actual,Ecoh_predict,1)
+ax.plot(Ecoh_actual,np.polyval(fit,Ecoh_actual),'-g',label = 'Linear fit',linewidth=2)
+
+# Adding final legend and saving figure in eps format
+plt.legend(loc='best',prop={'size':10})
+fig.savefig('Act_vs_Pred.eps', format='eps')
+
+# Closing the file
+f.close()
+
+"""
+--- QUESTION # 2 --- 
+Python program which creates an animation of the data using just the positions at different times
+"""
+
+import time
+import matplotlib.animation as an
+
+# Import file and extract variables - we only need time and positions
+f = netcdf_file('trajectory.nc','r')
+timepoints = f.variables['timepoints'][:]
+position = f.variables['position'][:]
+
+# FOR DEBUGGING: We can do interactive plotting as follows - This was created to check movement of particles
+#plt.ion()
+#plt.show()
+#for i in range(len(timepoints)):
+#    plt.scatter(position[i][:,0],position[i][:,1])
+#    plt.draw()
+#    time.sleep(0.05)
+#    plt.clf()
+
+# Specifying the animation writer and metadata
+ffwriter = an.writers['ffmpeg']
+metadata = dict(title = 'Particles_Positions', artist = 'Tomas_Mawyin',comment='Created for SCMP112 HW3')
+writer = ffwriter(fps=10, metadata=metadata)
+
+# Opening figure and plotting "nothing"
+fig = plt.figure()
+l, = plt.plot([],[],'o',color='0.75')
+
+# Specifying limits and plot labels
+plt.xlim(-22, 22)
+plt.ylim(-22, 22)
+plt.xlabel('x-position')
+plt.ylabel('y-position')
+plt.tight_layout()
+
+# Creating animation and saving file
+with writer.saving(fig, "ParticlePos.mp4", 100):
+    for i in range(len(timepoints)):
+        l.set_data(position[i][:,0], position[i][:,1])
+        txt =plt.text(14,20,'t = %f'%timepoints[i])
+        writer.grab_frame()
+        txt.remove()
+
+# Closing the file
+f.close()
