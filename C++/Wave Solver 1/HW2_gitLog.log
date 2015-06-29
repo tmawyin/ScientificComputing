@@ -1,0 +1,59 @@
+commit 043a1fe81a5accdc1fe21300423dec50bcc36dd3
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 21:55:48 2015 -0500
+
+    Created the make file to compile files
+
+commit 0878863d76bdc45533bcec8b0a3012b6ba913abe
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 21:01:18 2015 -0500
+
+    Added waveDriver.cpp which contains the main function to do the calculation and respective functions calls
+
+commit 1b5fdbe74108d6ca1f65d2ca043839ef2831c763
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 20:17:58 2015 -0500
+
+    Completed comments and inclusion of standard libraries for waveRead and waveStep files
+
+commit 3f40319ffb54bdfc0ebe95e385e82228d1e6a3d4
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:58:43 2015 -0500
+
+    Added function definitions to waveRead.cpp including the necessary comments to define the functions and to explain all different steps
+
+commit 5c874bc7b4666f40418bc0b7cecb92fe17b65769
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:56:14 2015 -0500
+
+    Added waveRead.cpp which contains the functions that perform reading and writing operations
+
+commit a799a05edd00fd64d3ab00a8df7c4bd58cd71f64
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:43:46 2015 -0500
+
+    Added function definitions to waveStep.h as well as description of what each function do
+
+commit 3b3fa292ca116fb81e27251c6a458a79067c0945
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:35:39 2015 -0500
+
+    Created header file waveStep.h to define functions that are related to solving the wave equation: initializing, exciting the wave, and evolving in time
+
+commit b3907ae107e91d31c0972cb84bdd9fb7b523fb60
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:32:55 2015 -0500
+
+    Added comments to the function definitions in the waveRead.h header file
+
+commit 9bcfdfb834039552ffa643078ca527bd73a65f0c
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:31:45 2015 -0500
+
+    Add two function definitions, one to read file and a second one to print values
+
+commit 896f5c1c5c9e8fa41ab80bc8e0a26df679608c34
+Author: Tomas Mawyin <tmawyin@gmail.com>
+Date:   Fri Jan 16 19:26:11 2015 -0500
+
+    Initial header file to specify read/write functions
