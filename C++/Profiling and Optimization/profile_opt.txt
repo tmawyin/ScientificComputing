@@ -1,0 +1,260 @@
+Initialization time:	0.03116 sec
+Multiplication time:	2.889 sec
+Writing to file time:	0.6552 sec
+Total time:	3.575 sec
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 89.87      2.61     2.61                             multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:50 @ 4016ba)
+  7.09      2.81     0.21                             multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:51 @ 40173f)
+  2.07      2.87     0.06                             multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:44 @ 40176a)
+  0.69      2.89     0.02                             multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:44 @ 4016ae)
+  0.35      2.90     0.01                             MyMatrix::output(char const*) (mymatrix.cc:63 @ 4013cc)
+  0.00      2.90     0.00   501007     0.00     0.00  MyMatrix::get_columns() (mymatrix.cc:44 @ 40128a)
+  0.00      2.90     0.00   500000     0.00     0.00  MyMatrix::set_element(int, int, double) (mymatrix.cc:50 @ 4012a4)
+  0.00      2.90     0.00     1008     0.00     0.00  MyMatrix::get_rows() (mymatrix.cc:39 @ 401270)
+  0.00      2.90     0.00        8     0.00     0.00  elapsed_time() (ticktock.cc:23 @ 40186c)
+  0.00      2.90     0.00        4     0.00     0.00  print(char const*, double) (ticktock.cc:14 @ 4017a2)
+  0.00      2.90     0.00        4     0.00     0.00  TickTock::tick() (ticktock.cc:30 @ 4018c0)
+  0.00      2.90     0.00        4     0.00     0.00  TickTock::silent_tock() const (ticktock.cc:42 @ 40192a)
+  0.00      2.90     0.00        4     0.00     0.00  TickTock::tock(char const*) const (ticktock.cc:36 @ 4018e8)
+  0.00      2.90     0.00        4     0.00     0.00  std::setprecision(int) (iomanip:193 @ 4019ce)
+  0.00      2.90     0.00        3     0.00     0.00  MyMatrix::get_pointer() (mymatrix.cc:80 @ 4014ba)
+  0.00      2.90     0.00        3     0.00     0.00  MyMatrix::output(char const*) (mymatrix.cc:56 @ 4012ee)
+  0.00      2.90     0.00        3     0.00     0.00  MyMatrix::MyMatrix(int, int) (mymatrix.cc:10 @ 401126)
+  0.00      2.90     0.00        3     0.00     0.00  MyMatrix::~MyMatrix() (mymatrix.cc:25 @ 4011ea)
+  0.00      2.90     0.00        3     0.00     0.00  std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) (ios_base.h:120 @ 401531)
+  0.00      2.90     0.00        2     0.00     0.00  initialize(MyMatrix&, double) (mm.cc:20 @ 400e9d)
+  0.00      2.90     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN8MyMatrixC2Eii (mymatrix.cc:82 @ 401517)
+  0.00      2.90     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN8TickTock4tickEv (ticktock.cc:47 @ 4019b4)
+  0.00      2.90     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int) (mymatrix.cc:82 @ 4014d5)
+  0.00      2.90     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int) (ticktock.cc:47 @ 401972)
+  0.00      2.90     0.00        1     0.00     0.00  multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:19 @ 40154e)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.34% of 2.90 seconds
+
+index % time    self  children    called     name
+                0.00    0.00       1/501007      multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:22 @ 401577) [75]
+                0.00    0.00       1/501007      multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:23 @ 401586) [76]
+                0.00    0.00       1/501007      multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:26 @ 401595) [77]
+                0.00    0.00       1/501007      multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:27 @ 4015cc) [78]
+                0.00    0.00       1/501007      multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:28 @ 401603) [79]
+                0.00    0.00       2/501007      initialize(MyMatrix&, double) (mm.cc:22 @ 400eb4) [65]
+                0.00    0.00  501000/501007      initialize(MyMatrix&, double) (mm.cc:28 @ 400f35) [71]
+[45]     0.0    0.00    0.00  501007         MyMatrix::get_columns() (mymatrix.cc:44 @ 40128a) [45]
+-----------------------------------------------
+                0.00    0.00  500000/500000      initialize(MyMatrix&, double) (mm.cc:29 @ 400eee) [69]
+[46]     0.0    0.00    0.00  500000         MyMatrix::set_element(int, int, double) (mymatrix.cc:50 @ 4012a4) [46]
+-----------------------------------------------
+                0.00    0.00       1/1008        multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:21 @ 401568) [74]
+                0.00    0.00       1/1008        multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:26 @ 401595) [77]
+                0.00    0.00       2/1008        initialize(MyMatrix&, double) (mm.cc:22 @ 400eb4) [65]
+                0.00    0.00       2/1008        multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:27 @ 4015cc) [78]
+                0.00    0.00    1002/1008        initialize(MyMatrix&, double) (mm.cc:27 @ 400f4f) [72]
+[47]     0.0    0.00    0.00    1008         MyMatrix::get_rows() (mymatrix.cc:39 @ 401270) [47]
+-----------------------------------------------
+                0.00    0.00       4/8           TickTock::tick() (ticktock.cc:30 @ 4018c0) [50]
+                0.00    0.00       4/8           TickTock::silent_tock() const (ticktock.cc:44 @ 40193b) [126]
+[48]     0.0    0.00    0.00       8         elapsed_time() (ticktock.cc:23 @ 40186c) [48]
+-----------------------------------------------
+                0.00    0.00       4/4           TickTock::tock(char const*) const (ticktock.cc:38 @ 4018fd) [130]
+[49]     0.0    0.00    0.00       4         print(char const*, double) (ticktock.cc:14 @ 4017a2) [49]
+-----------------------------------------------
+                0.00    0.00       1/4           main (mm.cc:61 @ 40101e) [23]
+                0.00    0.00       1/4           main (mm.cc:63 @ 401041) [25]
+                0.00    0.00       2/4           main (mm.cc:42 @ 400f85) [14]
+[50]     0.0    0.00    0.00       4         TickTock::tick() (ticktock.cc:30 @ 4018c0) [50]
+                0.00    0.00       4/8           elapsed_time() (ticktock.cc:23 @ 40186c) [48]
+-----------------------------------------------
+                0.00    0.00       4/4           TickTock::tock(char const*) const (ticktock.cc:38 @ 4018fd) [130]
+[51]     0.0    0.00    0.00       4         TickTock::silent_tock() const (ticktock.cc:42 @ 40192a) [51]
+-----------------------------------------------
+                0.00    0.00       1/4           main (mm.cc:56 @ 40100d) [22]
+                0.00    0.00       1/4           main (mm.cc:63 @ 401041) [25]
+                0.00    0.00       1/4           main (mm.cc:72 @ 401091) [30]
+                0.00    0.00       1/4           main (mm.cc:75 @ 4010a2) [31]
+[52]     0.0    0.00    0.00       4         TickTock::tock(char const*) const (ticktock.cc:36 @ 4018e8) [52]
+-----------------------------------------------
+                0.00    0.00       4/4           print (ticktock.cc:17 @ 4017c0) [41]
+[53]     0.0    0.00    0.00       4         std::setprecision(int) (iomanip:193 @ 4019ce) [53]
+-----------------------------------------------
+                0.00    0.00       1/3           multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:31 @ 40163a) [80]
+                0.00    0.00       1/3           multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:32 @ 40164a) [81]
+                0.00    0.00       1/3           multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:33 @ 40165a) [82]
+[54]     0.0    0.00    0.00       3         MyMatrix::get_pointer() (mymatrix.cc:80 @ 4014ba) [54]
+-----------------------------------------------
+                0.00    0.00       1/3           main (mm.cc:69 @ 40105e) [27]
+                0.00    0.00       2/3           main (mm.cc:71 @ 401080) [29]
+[55]     0.0    0.00    0.00       3         MyMatrix::output(char const*) (mymatrix.cc:56 @ 4012ee) [55]
+-----------------------------------------------
+                0.00    0.00       1/3           main (mm.cc:49 @ 400fa7) [17]
+                0.00    0.00       1/3           main (mm.cc:50 @ 400fbd) [18]
+                0.00    0.00       1/3           main (mm.cc:51 @ 400fd3) [19]
+[56]     0.0    0.00    0.00       3         MyMatrix::MyMatrix(int, int) (mymatrix.cc:10 @ 401126) [56]
+-----------------------------------------------
+                0.00    0.00       1/3           main (mm.cc:51 @ 4010b8) [33]
+                0.00    0.00       2/3           main (mm.cc:78 @ 4010d0) [35]
+[57]     0.0    0.00    0.00       3         MyMatrix::~MyMatrix() (mymatrix.cc:25 @ 4011ea) [57]
+-----------------------------------------------
+                0.00    0.00       3/3           MyMatrix::output(char const*) (mymatrix.cc:59 @ 40132b) [99]
+[58]     0.0    0.00    0.00       3         std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) (ios_base.h:120 @ 401531) [58]
+-----------------------------------------------
+                0.00    0.00       1/2           main (mm.cc:54 @ 400fe9) [20]
+                0.00    0.00       1/2           main (mm.cc:55 @ 400ff9) [21]
+[59]     0.0    0.00    0.00       2         initialize(MyMatrix&, double) (mm.cc:20 @ 400e9d) [59]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [137]
+[60]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN8MyMatrixC2Eii (mymatrix.cc:82 @ 401517) [60]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) (mymatrix.cc:82 @ 4014d5) [62]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [137]
+[61]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN8TickTock4tickEv (ticktock.cc:47 @ 4019b4) [61]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) (ticktock.cc:47 @ 401972) [63]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN8MyMatrixC2Eii (mymatrix.cc:82 @ 401517) [60]
+[62]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) (mymatrix.cc:82 @ 4014d5) [62]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN8TickTock4tickEv (ticktock.cc:47 @ 4019b4) [61]
+[63]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) (ticktock.cc:47 @ 401972) [63]
+-----------------------------------------------
+                0.00    0.00       1/1           main (mm.cc:62 @ 40102a) [24]
+[64]     0.0    0.00    0.00       1         multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:19 @ 40154e) [64]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [60] _GLOBAL__sub_I__ZN8MyMatrixC2Eii (mymatrix.cc:82 @ 401517) [3] multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:44 @ 40176a) [56] MyMatrix::MyMatrix(int, int) (mymatrix.cc:10 @ 401126)
+  [61] _GLOBAL__sub_I__ZN8TickTock4tickEv (ticktock.cc:47 @ 4019b4) [48] elapsed_time() (ticktock.cc:23 @ 40186c) [57] MyMatrix::~MyMatrix() (mymatrix.cc:25 @ 4011ea)
+  [59] initialize(MyMatrix&, double) (mm.cc:20 @ 400e9d) [49] print(char const*, double) (ticktock.cc:14 @ 4017a2) [50] TickTock::tick() (ticktock.cc:30 @ 4018c0)
+  [62] __static_initialization_and_destruction_0(int, int) (mymatrix.cc:82 @ 4014d5) [45] MyMatrix::get_columns() (mymatrix.cc:44 @ 40128a) [51] TickTock::silent_tock() const (ticktock.cc:42 @ 40192a)
+  [63] __static_initialization_and_destruction_0(int, int) (ticktock.cc:47 @ 401972) [54] MyMatrix::get_pointer() (mymatrix.cc:80 @ 4014ba) [52] TickTock::tock(char const*) const (ticktock.cc:36 @ 4018e8)
+  [64] multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:19 @ 40154e) [46] MyMatrix::set_element(int, int, double) (mymatrix.cc:50 @ 4012a4) [53] std::setprecision(int) (iomanip:193 @ 4019ce)
+   [4] multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:44 @ 4016ae) [55] MyMatrix::output(char const*) (mymatrix.cc:56 @ 4012ee) [58] std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) (ios_base.h:120 @ 401531)
+   [1] multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:50 @ 4016ba) [5] MyMatrix::output(char const*) (mymatrix.cc:63 @ 4013cc)
+   [2] multiply(MyMatrix&, MyMatrix&, MyMatrix&) (mymultiply.cc:51 @ 40173f) [47] MyMatrix::get_rows() (mymatrix.cc:39 @ 401270)
